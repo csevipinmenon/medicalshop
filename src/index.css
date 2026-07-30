@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #0f2a24;
+  background-color: #f6faf8;
+}
+
+.font-display {
+  font-family: "Sora", sans-serif;
+}
+
+/* Blister-pack style perforated divider - a small signature motif used across the site */
+.blister-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blister-divider .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #aaf0d0;
+  flex-shrink: 0;
+}
+.blister-divider .line {
+  flex: 1;
+  height: 1px;
+  background: repeating-linear-gradient(to right, #cdeee0 0, #cdeee0 6px, transparent 6px, transparent 12px);
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #17a876;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
